@@ -1,0 +1,20 @@
+name: "AWS EC2 Deployment"
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  deploy-to-aws-ec2:
+    name: AWS EC2 Deployment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SERVER_SSH_KEY }}" | base64 --decode > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+      - name: Deploy to AWS EC2
+        run: |
+          ssh -i ~/.ssh/id_rsa admin@${{ secrets.SERVER_HOST }} "cd /var/FaceApi; sudo git fetch; sudo git pull; sudo systemctl restart faceapi"
