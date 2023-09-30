@@ -1,7 +1,7 @@
 import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile
-from components.serve_model import predict, read_imagefile
+from .components.serve_model import predict, read_imagefile
 import os
 
 load_dotenv(".env")
