@@ -61,7 +61,7 @@ Thank you for your interest in becoming a contributor. We're thrilled to have yo
 
 6. Before raising <b>PR</b> always attach images of your contribution for recieiving a quick response from us.
 
-<b>Best of Luck 🎉</b>
+<b>Best of Luck 🎉</b> and be sure to start the repo 🤩
 
 ### Hacktoberfest 2023 ⭐
 
