@@ -1,56 +1,73 @@
-# FaceApi
+## FaceApi
 
-## **Description**:
+### Project Description
 
-Its a python server made using <strong>FastApi</strong> which performs all machine learning related tasks from indentifying image type to detecting faces and speech recognition. It's in very rudimentary stage and different type of api functionality need to added to be used for various AI related Tasks. Presently there is only one features which detects the type of objects in the image.
+<b>FaceApi</b> project is a Python server powered by <a href="https://fastapi.tiangolo.com/"><b>FastAPI</b></a>, tailored for machine learning tasks encompassing image type identification, face detection, and speech recognition. In its early stages, the project currently excels at identifying objects within images and has plans to expand its capabilities with upcoming features such as face detection and speech recognition. Designed to be a versatile tool for various AI-related tasks, FaceAPI welcomes contributions from the community and aims to evolve into a comprehensive solution for diverse applications.
 
-## Table of Contents
+### Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Contribution Guides](#wanna-contribute-to-face-api-)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Contribution Guides](#wanna-contribute-to-face-api-)
 
-## Getting Started
+### Getting Started
 
-Begin by setting up and running the project on your local machine.
+Start by configuring and launching the project on your local machine after following the [Prerequisites](#prerequisites) !
 
 ### Prerequisites
 
-Before you begin, ensure you have the following prerequisites installed:
+Before you begin, ensure you have the following prerequisites installed on your system / local machines.
 
 - Python (Python 3.10.7 preferred)
 - Knowledge of Machine Learning models and how to use model in the application.
-- FastApi
+- FastAPI Knowledge
 
 ### Installation
 
 Follow these steps to get the project up and running:
 
-```bash
-     pip install -r requirements.txt
-     uvicorn src.app:app --reload
-```
+- <b>Installing depenedencies : </b>
 
-# Wanna Contribute to Face Api ?
+  ```python
+  pip install -r requirements.txt
+  ```
 
-Welcome. We're excited to have you as a contributor. Before you get started, please take a moment to read through this guide to understand how you can contribute to our project.
+- <b>Initializing server : </b>
 
-## To Contribute
+  ```python
+  uvicorn src.app:app --reload
+  ```
 
-1. Create an issue explaining the new api endpoints to be added or any issue in any previously added api endpoints
+### Wanna Contribute to Face Api ?
 
-2. Fork the repository to your own GitHub account.
+Thank you for your interest in becoming a contributor. We're thrilled to have you on board! Before diving in, please take a moment to peruse this guide, which will provide you with valuable insights on how to get involved and make meaningful contributions to our project.
 
-3. Clone the forked repository to your local machine:
+### To Contribute
 
-   ```bash
-   git clone https://github.com/<your-github-id>/FaceApi.git
+1. Fork the repository to your own GitHub account.
 
-4. Make the necessary changes you want to make in your local repository.
+2. Clone the forked repository to your local machine:
 
-5. Create a Pull Request using one of our templates.
+   ```python
+   git clone https://github.com/<your_github_id>/FaceApi.git
+   ```
 
-6. Before raising pull requests always attach images of your contribution for review.
+3. Create an issue explaining the new api endpoints to be added or any issue in any previously added api endpoints.
 
-Best of Luck!
+4. Make the necessary changes you want to make in your local repository after making thorough checks.
+
+5. Create a Pull Request [PR] using one of our templates after making a commit from your systems.
+
+6. Before raising <b>PR</b> always attach images of your contribution for recieiving a quick response from us.
+
+<b>Best of Luck 🎉</b>
+
+### Hacktoberfest 2023 ⭐
+
+This repository is participating in <b><a href="https://hacktoberfest.com/">Hacktoberfest 2023</a></b> ! So you can make contributions in accordance with Hacktoberfest as well.
+
+### References
+
+- FastAPI [<a href="https://fastapi.tiangolo.com/">Website</a>]
+- NumPy [<a href="https://numpy.org/doc/stable/">Documentation</a>]
