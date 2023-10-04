@@ -2,8 +2,11 @@ from io import BytesIO
 
 import numpy as np
 import tensorflow as tf
+import cv2
+import face_recognition
+from tensorflow import keras
 from PIL import Image
-from tensorflow.keras.applications.imagenet_utils import decode_predictions
+from keras.applications.imagenet_utils import decode_predictions
 
 model = None
 
@@ -39,3 +42,20 @@ def predict(image: Image.Image):
 def read_imagefile(file) -> Image.Image:
     image = Image.open(BytesIO(file))
     return image
+
+def compare_two_faces(image1: Image.Image, image2: Image.Image):
+    image1 = np.asarray(image1.resize((224, 224)))[..., :3]
+    image2 = np.asarray(image2.resize((224, 224)))[..., :3]
+
+    face1_encodings = face_recognition.face_encodings(image1)
+    face2_encodings = face_recognition.face_encodings(image2)
+
+    if not face1_encodings or not face2_encodings:
+        return "No face detected in one of the images"
+
+    face1 = face1_encodings[0]
+    face2 = face2_encodings[0]
+
+    result = face_recognition.compare_faces([face1], face2)
+
+    return result[0] and "Same person" or "Not same person"

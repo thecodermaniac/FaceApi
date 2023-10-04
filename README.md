@@ -20,6 +20,7 @@ Start by configuring and launching the project on your local machine after follo
 Before you begin, ensure you have the following prerequisites installed on your system / local machines.
 
 - Python (Python 3.10.7 preferred)
+- Visual Studio (for C++ build tools)
 - Knowledge of Machine Learning models and how to use model in the application.
 - FastAPI Knowledge
 
